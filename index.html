@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    main {
+        margin-top: 70px; 
+    }
+    .nav-item .dropdown-menu a:hover {
+        color: rgb(255, 255, 255) !important;
+        background: pink !important;
+        cursor: pointer;
+    }
+    .nav-link.active {
+        color: white !important;
+    }
+    body {
+        position:relative;
+        background-color: rgb(232, 70, 70);
+    }
+    #navi2 img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    #navi2 .col-md-4:nth-child(1) img {
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+    #navi2 .col-md-4:nth-child(3) img {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    }
+    #navi2 .row{
+        text-align: center;
+    }
+    #accordion {
+    max-width: 750px; /* Adjust this value to make it smaller or bigger */
+    margin: 0 auto;   /* Centers the accordion */
+    background-color: #f8d7da;
+    }
+  /* Optionally reduce padding and font size */
+  #accordion .card-header a {
+    font-size: 1.2rem; /* Adjust the font size */
+    padding: 10px;     /* Adjust the padding */
+    background-color: #f8d7da; /* Light pink background for the header */
+  color: #721c24; /* Dark red text color for the header */
+}
+  #accordion .card-body {
+    font-size: 1rem;   /* Adjust the body text size */
+    background-color: #fce8e6; /* Lighter pink background for the body */
+  color: #721c24; 
+  }
+  #accordion .card-header a {
+  color: #721c24; /* Dark red link text color */
+}
+
+#accordion .card-header a:hover {
+  color: #f8d7da; /* Lighter color on hover */
+}
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+  <main id="main">
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+        <div class="container-fluid" id="alku">
+          <a class="navbar-brand" href="#alku">Marcos World
+            <img src="burger.jpg" alt="Logo" style="width:40px;" class="rounded-pill">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#navi1">Etusivu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#navi2">Ravintola</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#navi3" role="button" data-bs-toggle="dropdown">Menu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#lounas">Lounas</a></li>
+                  <li><a class="dropdown-item" href="#alacarte">A La Carte</a></li>
+                  <li><a class="dropdown-item" href="#juomat">Juomat</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#navi4">Ota Yhteyttä</a>
+              </li>         
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Carousel -->
+<div id="navi1" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#navi1" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#navi1" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#navi1" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#navi1" data-bs-slide-to="3"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="burger.jpeg" alt="Burger" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Burgers</h3>
+          <p>Best burgers with the best ingredients!!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Steak.jpeg" alt="Steak" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Steak</h3>
+          <p>Steak that will make your mouth melt!</p>
+        </div> 
+      </div>
+      <div class="carousel-item">
+        <img src="Wine.jpeg" alt="Wine" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Wine</h3>
+          <p>Best Wine in the city!</p>
+        </div>  
+      </div>
+      <div class="carousel-item">
+        <img src="cake.jpeg" alt="Cake" class="d-block" style="width:100%;">
+        <div class="carousel-caption">
+            <h3>Dessert</h3>
+            <p>We love Desserts!</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#navi1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#navi1" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    
+    <div id="navi2" class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4"><img src="ravintola.jpeg" alt="ravintola"></div>
+            <div class="col-md-4">Tule nauttimaan hyvästä ruuasta ja laajasta juomavalikoimastamme tunnelmalliseen ympäristöön.Löydät meidät Pasilan aseman kupeesta.Ratapihantie 13    Auki: su-to 10:30-20:00 ja pe-la 11:00-23:00</div>
+            <div class="col-md-4"><img src="ravintola2.jpeg" alt="ravintola2"></div>
+        </div>
+    </div>
+
+    <div id="navi3" class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width:100%">
+                    <img class="card-img-top" src="burger.jpeg" alt="burger">
+                    <div class="card-body">
+                        <h4 class="card-title">Burgerit</h4>
+                        <p class="card-text">Mehukkaimmat hampparit mitä voi löytää Euroopasta.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width:100%">
+                    <img class="card-img-top" src="Steak.jpeg" alt="steak">
+                    <div class="card-body">
+                        <h4 class="card-title">Steak</h4>
+                        <p class="card-text">The steaks are selected from the finest cows and made with experts with years of experience.</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width:100%">
+                    <img class="card-img-top" src="Wine.jpeg" alt="wine">
+                    <div class="card-body">
+                        <h4 class="card-title">Wines</h4>
+                        <p class="card-text">Wines from all over the wrold like Italy,Chile and even homegrown Wines..</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width:100%">
+                    <img class="card-img-top" src="cake.jpeg" alt="cake">
+                    <div class="card-body">
+                        <h4 class="card-title">Cakes</h4>
+                        <p class="card-text">Cakes made faily with fresh ingredient and the secret ingredient that is called love.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="accordion">
+
+        <div id="navi3" class="card">
+          <div class="card-header">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+              Coffe
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              
+Welcome to our coffee paradise! Savor the rich aromas and bold flavors of our carefully selected beans from around the world. Whether you love a strong espresso, a smooth latte, or a refreshing cold brew, we’ve got the perfect cup for every coffee enthusiast. Start your day with the best brew in town!
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+              Beers
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+                Welcome to our beer haven! Discover a curated selection of the finest local and international brews. Whether you’re a fan of rich stouts, hoppy IPAs, or refreshing lagers, we have something for every beer lover. Explore unique flavors and enjoy the perfect pint in a vibrant atmosphere. Cheers!
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+              Wines
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+                Discover our exquisite collection of wines from renowned vineyards across the globe. Whether you're a fan of full-bodied reds, crisp whites, or sparkling delights, we have the perfect bottle for every occasion. Elevate your dining experience with our carefully curated selection of fine wines
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <div id="navi4" class="container mt-3">
+        <h2>Ota Yhteyttä</h2>
+        <p>Jos halaut ottaa yhteyttä meidän ravintolaan tässä on meidän esimiesten sähköposti alla.</p>            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Etunimi</th>
+              <th>Sukunimi</th>
+              <th>Sähköposti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Olli</td>
+              <td>Opiskelija</td>
+              <td>olliopiskelija@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Maria</td>
+              <td>Marttikainen</td>
+              <td>mariamarttikainen@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Julia</td>
+              <td>Aalto</td>
+              <td>juliaaalto@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>
+              Address: 1234 Main Street, City, Country<br>
+              Phone: +123 456 7890<br>
+              Email: contact@example.com
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#navi1" class="text-white">Home</a></li>
+              <li><a href="#navi2" class="text-white">Restaurant</a></li>
+              <li><a href="#navi3" class="text-white">Menu</a></li>
+              <li><a href="#navi4" class="text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a>
+              <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+              <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+              <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin-in"></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p>&copy; 2024 Marcos World. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
